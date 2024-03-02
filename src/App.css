@@ -38,6 +38,8 @@ input {
   width: 394px;
   height: 45px;
   border-radius: 5px;
+  background-color: #F5F5F5;
+  border: 1px solid #FFFFFF;
 
 }
 
@@ -58,5 +60,71 @@ input::placeholder {
 
 }
 
+.meetUpWrapper {
+  background-color: #FFFFFF;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.profileNavWrapper {
+  width: 80px;
+  height: 708px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #F9FAFB;
+  border-radius: 15px;
+  padding: 10px;
+ 
+}
 
+.iconsWrap {
+  width: 50px;
+  height: 192px;
+  padding: 10px;
+  
+
+}
+
+.icon {
+  margin: 10px;
+}
+
+.queWrap {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 277px;
+  height: 707px;
+  background-color: #F9FAFB;
+  border-radius: 15px;
+}
+
+.askQueWrap {
+  display: flex;
+} 
+
+.userQueWrap {
+  width: 184px;
+  height: 250px;
+  background-color: #176DEE;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.que {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.queIconsWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px;
+}
