@@ -1,13 +1,12 @@
-import logo from './logo.svg';
+import Signup from './components/Signuppage';
+import Signin from './components/Signinpage';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
+    <>
+    <Signup  />
+    <Signin /> 
+    </>
+  )
 }
-  
-  
-export default App;
