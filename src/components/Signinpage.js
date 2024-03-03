@@ -20,7 +20,10 @@ export default function Signin() {
                         <input type='password' placeholder='Password' />
                     </label>
 
-                    <Button text= "Login"/>
+                    <Button 
+                    text= "Login"
+
+                    />
                     
                 </form>
             </div>

@@ -20,7 +20,7 @@ export default function Signup() {
                         <input type='text' placeholder='Last Name' />
                     </label>
 
-                    <label for='emailAddress'> Email
+                    <label for='emailAddress'> Email Address
                         <input type='email' placeholder='Email' />
                     </label>
 

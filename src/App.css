@@ -61,7 +61,6 @@ input::placeholder {
 }
 
 .meetUpWrapper {
-  background-color: #FFFFFF;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -89,6 +88,11 @@ input::placeholder {
 
 .icon {
   margin: 10px;
+  
+}
+
+.user {
+  border-radius: 50%;
 }
 
 .queWrap {
@@ -96,7 +100,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 277px;
+  width: 350px;
   height: 707px;
   background-color: #F9FAFB;
   border-radius: 15px;
@@ -104,11 +108,29 @@ input::placeholder {
 
 .askQueWrap {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 36px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  padding-bottom: 20px;
 } 
 
+textarea {
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  color: #9DA4AF;
+  text-align: center;
+}
+
+
 .userQueWrap {
-  width: 184px;
-  height: 250px;
+  width: 250px;
+  height: 130px;
+  font-size: 12px;
   background-color: #176DEE;
   color: #ffffff;
   border-radius: 6px;
@@ -126,5 +148,91 @@ input::placeholder {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #FFFEFE;
+  color: #000000;
+  border-radius: 50px;
+  
+}
+
+.mainWrap {
+  background-color: #F9FAFB;
+  padding: 30px;
+}
+
+.heroImgWrap {
+  width: 630px;
+  height: 250px;
+  margin-top: 15px;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+}
+
+.hostName {
+  position: absolute;
+  left: 23%;
+  margin-top: 200px;
+  background-color: #020f2179;
+  color: #ffffff;
+  width: 65px;
+  height: 25px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+
+.cardWrap {
+  width: 130px;
+  height: 130px;
+  
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cardListWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.particName {
+  background-color: #020f2179;
+  color: #ffffff;
+  width: 65px;
+  height: 25px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.footerWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  width: 340px;
+  height: 38px;
+}
+
+.exitBtn {
+  width: 116px;
+  height: 37px;
+  background-color: #F1414F;
+  border-radius: 20px;
+  color: #ffffff;
+  border: none;
 }
