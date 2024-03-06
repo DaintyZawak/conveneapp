@@ -87,17 +87,15 @@ export default function Signup() {
           <label htmlFor="confirmPassword"> Password</label>
           <input
             type="password"
-            placeholder="confirmPassword"
+            placeholder="Confirm Password"
             id="confirmPassword"
             name="confirmPassword"
             onChange={handleChange}
             value={formData.password}
           />
 
-          <label htmlFor="agreement">
-            {" "}
-            I have read and agreed to the <a href="">Terms of Service</a>
-          </label>
+            <div className="agreement">
+          
           <input
             id="agreement"
             type="checkbox"
@@ -105,8 +103,13 @@ export default function Signup() {
             name="agreement"
             checked={formData.agreement}
           />
+          <label htmlFor="agreement">
+            {" "}
+            I have read and agreed to the <a href="">Terms of Service</a>
+          </label>
+            </div>
 
-          <fieldset>
+          {/* <fieldset>
             <legend>How did you find out about us?</legend>
             <label htmlFor="instagram">Instagram</label>
             <input
@@ -172,7 +175,7 @@ export default function Signup() {
                 name="comments"
               />{" "}
             </label>
-          </fieldset>
+          </fieldset> */}
 
           <Button text="Sign up" />
         </form>
