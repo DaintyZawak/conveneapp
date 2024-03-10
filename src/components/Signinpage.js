@@ -2,7 +2,7 @@ import { useState } from "react"
 import Button from "./Buttton"
 
 export default function Signin() {
-    const [formData, setFormData] = useState(
+    const [formData, setFormData] = useState(("Login"),
         {
             emailAddress: "", 
             password: "",
@@ -62,6 +62,7 @@ export default function Signin() {
                     
 
                    <Button text= "Login"/>
+                   <Button text="Sign up" />
                 </form>
             </div>
 

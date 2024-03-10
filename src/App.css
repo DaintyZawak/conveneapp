@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 .onboardingPage {
   background-color: #FFFEFE;
   margin: 100px auto;
-  width: 582px;
+  width: 600px;
   height: 800px;
   border-radius: 10px;
   padding: 30px;
@@ -64,6 +65,11 @@ input::placeholder {
   color: #ffffff;
   border: none;
 
+}
+
+.grey {
+  background-color: #EAEAEA;
+  color: #676767;
 }
 
 .meetUpWrapper {

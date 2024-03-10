@@ -14,7 +14,7 @@ export default function Userprofile() {
           <div className="profileDetails">
             <h2>Personal Details</h2>
             <div>
-              <h3>User Name</h3>
+              <h3>Username</h3>
               <p>John Doe</p>
             </div>
             <div>
@@ -27,9 +27,10 @@ export default function Userprofile() {
             </div>
           </div>
 
+          <aside>
           <div className="activities">
-            <aside>
-              <h2>Activities</h2></aside>
+            
+              <h2>Activities</h2>
 
               <div>
                 <h3>
@@ -41,8 +42,11 @@ export default function Userprofile() {
                   <button className="view">View your comments</button>
                 </div>
               </div>
+
+            
             
           </div>
+          </aside>
 
           <div className="upcomingEvents">
             <h2>Upcoming Events</h2>
