@@ -1,7 +1,12 @@
+
+import { Link
+} from "react-router-dom";
 import Background from "../Assets/backg.jpg";
 import Networking from "../Assets/network-2.png";
 
+
 function Homepage() {
+  
     return (
       <div className="homepage">
         <div className="homenav">
@@ -11,15 +16,21 @@ function Homepage() {
           <div className="righthomenav">
             <ul>
               <li>Our Story</li>
-              <li>Sign In</li>
-              <li>Get started</li>
+              <li>Membership</li>
+              <li><Link to="/signup">Sign up</Link></li>
+              <li><Link to="/login">Login</Link></li>
+              <li><Link to="/adminlogin">Admin Console</Link></li>
+              <li><Link to="/adminsignup">Become an admin</Link></li>
+              <li>About us</li>
             </ul>
+           
           </div>
         </div>
         <section className="homebody">
           <div className="backg">
             <img className="background" src={Background} alt="backg" />
             <div className="textcontainer">
+              
               <h2>Make Group for Team Work!</h2>
             </div>
             <div className="imagecontainer">

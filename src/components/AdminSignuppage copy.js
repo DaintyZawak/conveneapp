@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "./Buttton";
 export default function AdminSignup() {
   const [formData, setFormData] = useState({
@@ -36,11 +37,15 @@ export default function AdminSignup() {
       <div className="onboardingPage">
         <div class="welcomeTxt">
           <h1>Welcome to Convene!</h1>
+          
           <h2>Create an Admin account</h2>
 
-          <p>
-            Already have an account? <a href="">Sign in as an admin</a>
-          </p>
+          <div className="loginLink">
+                <p>Already have an account? <Link to="/adminlogin">Login</Link></p>
+                
+              
+              </div>
+         
         </div>
 
         <form onSubmit={handleSubmit}>

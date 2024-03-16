@@ -8,6 +8,9 @@ import meetupcard1 from '../Assets/woman-with-headset-video-call.png'
 import meetupcard2 from '../Assets/woman-with-headset-video-call.png'
 
 export default function Meetuppage() {
+
+
+
     return (
         <div className='meetUpWrapper'>
          <ProfileNav />

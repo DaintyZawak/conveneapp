@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import Button from "./Buttton"
 
 export default function AdminSignin() {
@@ -42,6 +43,11 @@ export default function AdminSignin() {
                 <h1>Welcome Back to Convene!</h1>
                 <h2>Login as an Admin
                 </h2>
+                <div className="signUpLink">
+            <p>
+              Don't have an account? <Link to="/adminsignup">Sign up</Link>
+            </p>
+          </div>
                 </div>
 
 

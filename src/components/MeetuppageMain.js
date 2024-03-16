@@ -9,6 +9,7 @@ import vidIcon from "../Assets/icons8-video-call-24.png";
 import audioIcon from "../Assets/icons8-microphone-24.png";
 
 export default function MeetuppageMain() {
+
   return (
     <div className="mainWrap">
       <h1>Software Development weekly meetup</h1>

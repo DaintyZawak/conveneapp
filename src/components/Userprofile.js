@@ -1,14 +1,29 @@
+import { useNavigate } from "react-router";
+import { useUserAuth } from "../context/UserAuthContext";
 import profileAvatar from "../Assets/Union.png";
 import profileIcon from "../Assets/pro 2 1.png";
 import thumbsUp from "../Assets/icons8-thumbs-up-24.png";
 import thumbsDown from "../Assets/icons8-thumbs-down-24.png";
 import commentIcon from "../Assets/icons8-comment-24.png";
+import Button from "./Buttton";
 
 export default function Userprofile() {
+  const { logOut, user } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
     <div className="profile">
       <div class="welcomeTxt">
         <h1>My Profile</h1>
+        <h2>Welcome <br />
+              {user && user.email} </h2>
         <div className="profileDetailsWrap">
           <img className="icon" src={profileAvatar} alt="profile avater" />
           <div className="profileDetails">
@@ -25,6 +40,7 @@ export default function Userprofile() {
               <h3>Password</h3>
               <p>********</p>
             </div>
+            <Button text="Log out" onClick={handleLogout} />
           </div>
 
           <aside>

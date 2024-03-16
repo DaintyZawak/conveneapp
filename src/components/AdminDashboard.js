@@ -7,7 +7,7 @@ import Button from "./Buttton";
 
 export default function AdminDashboard() {
   return (
-    <div className="profile">
+    <div className="onboardingPage">
       <div class="welcomeTxt">
         <h1>My Admin Dashboard</h1>
         <div className="profileDetailsWrap">

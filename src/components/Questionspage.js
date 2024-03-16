@@ -20,24 +20,24 @@ export default function Questionpage() {
       img= {profile1}
       name= 'Sofiyat Gbadamosi'
       question= 'What is React?'
-      upvote= {300}
-      downvote= {20}
+      upvote= ""
+      downvote= ""
       comment= {105}
        />
       <Questions 
       img= {profile2}
       name= 'Obianuju Onoha'
       question= 'What is the difference between JavaScript and React?'
-      upvote= {150}
-      downvote= {55}
+      upvote= ""
+      downvote= ""
       comment= {33}
       />
       <Questions 
       img= {profileIcon}
       name= 'You'
       question= 'What is JavaScript?'
-      upvote= {150}
-      downvote= {55}
+      upvote= ""
+      downvote= ""
       comment= {1}
       />
 
