@@ -16,6 +16,7 @@ export default function Questions(props) {
     setDownVote((prevvote) => prevvote + 1);
   }
   return (
+
     <div>
       <div className="userQueWrap">
         <div className="que">
@@ -48,5 +49,37 @@ export default function Questions(props) {
         </div>
       </div>
     </div>
+    // <div>
+    //   <div className="questionWrap">
+    //     <div className="quest">
+    //       <img
+    //         className="user"
+    //         src={props.img}
+    //         alt={props.name}
+    //         width="50px"
+    //         height="50px"
+    //       />
+    //       <div className="nameQuestion"></div>
+    //       <div className="content">
+
+    //         <h3 className="userName">{props.name}</h3>
+    //         <p className="userQuestion">{props.question}</p>
+    //         <div className="vote">
+    //           <img className="up" src={thumbsUp} alt="user icon" onClick={upVote} />
+    //           <span>{upvote}</span>
+    //           <img className="down" src={thumbsDown} alt="user icon" onClick={downVote} />
+    //           <span>{downvote}</span>
+    //           <img className="comment" src={commentIcon} alt="user icon" />
+    //           <span>{props.comment}</span>
+    //           <div className="time">
+    //           <span>9:44</span>
+    //           </div>
+    //         </div>
+            
+    //       </div>
+
+    //     </div>
+    //   </div>
+    // </div>
   );
 }

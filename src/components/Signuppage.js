@@ -25,7 +25,7 @@ import Button from "./Buttton";
         agreement: true,
         contact: "",
         location: "",
-        rememberForget: true,
+        // rememberForget: true,
       });
 
       
@@ -59,23 +59,28 @@ import Button from "./Buttton";
       return (
         <>
           <div className="onboardingPage">
+            <div className="overallSignup">
+          <form onSubmit={handleSubmit}>
             <div class="welcomeTxt">
-              <h1>Welcome to Convene!</h1>
-              <h2>Create account</h2>
+
+            <h2 className="convene">Welcome to Convene!</h2>
+          <h1 className="welcome">Create Account</h1>
     
                 <div className="loginLink">
-                <p>Already have an account? <Link to="/login">Login</Link></p>
-                
+                <p className="already">Already have an account?{" "}
+                <span className="span">
+                <Link to="/login">Login</Link></span></p>
+               
               
               </div>
             </div>
             
-            <form onSubmit={handleSubmit}>
-                <div className="inputBox">
+            <div className="labelInput">
+                <div className="inputLabel">
               <label htmlFor="firstName"> First Name</label>
               <input
                 type="text"
-                placeholder="First Name"
+                placeholder="Enter your first name"
                 id="firstName"
                 name="firstName"
                 onChange={handleChange}
@@ -84,25 +89,13 @@ import Button from "./Buttton";
               />
               </div>
     
-              <div className="inputBox">
-              <label htmlFor="userName">Username</label>
-              <input
-                type="text"
-                placeholder="Username"
-                id="username"
-                name="username"
-                onChange={handleChange}
-                value={formData.username}
-                required
-              />
-              <FaUser className="user" />
-              </div>
+              
     
               <div className="inputBox">
               <label htmlFor="lastName"> Last Name</label>
               <input
                 type="text"
-                placeholder="Last Name"
+                placeholder="Enter your last name"
                 id="lastName"
                 name="lastName"
                 onChange={handleChange}
@@ -110,12 +103,26 @@ import Button from "./Buttton";
                 required
               />
               </div>
+
+              <div className="inputBox">
+              <label htmlFor="userName">Username</label>
+              <input
+                type="text"
+                placeholder="Enter your Username"
+                id="username"
+                name="username"
+                onChange={handleChange}
+                value={formData.username}
+                required
+              />
+              {/* <FaUser className="user" /> */}
+              </div>
     
               <div className="inputBox">
               <label htmlFor="emailAddress"> Email Address</label>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Enter your email address"
                 id="emailAddress"
                 name="emailAddress"
                 onChange={handleChange}
@@ -128,21 +135,25 @@ import Button from "./Buttton";
               <label htmlFor="password"> Password</label>
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Create your password"
+                minLength="6"
+                maxlength="15"
                 id="password"
                 name="password"
                 onChange={handleChange}
                 value={formData.password}
                 required
               />
-                <FaLock className="icon" />
+                {/* <FaLock className="icon" /> */}
               </div>
     
               <div className="inputBox">
-              <label htmlFor="confirmPassword"> Password</label>
+              <label htmlFor="confirmPassword"> Confirm Password</label>
               <input
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Confirm password"
+                minLength="6"
+                maxlength="15"
                 id="confirmPassword"
                 name="confirmPassword"
                 onChange={handleChange}
@@ -152,10 +163,12 @@ import Button from "./Buttton";
     
               </div>
     
-              
+              <Button text="Sign up" />
+    
     
                 <div className="agreement">
                 <div className="inputBox">
+                <label htmlFor="agreement" className="checkbox-label">
               <input
                 id="agreement"
                 type="checkbox"
@@ -164,42 +177,29 @@ import Button from "./Buttton";
                 checked={formData.agreement}
                 required
               />
-              </div>
-    
-              
-              <label htmlFor="agreement">
-                {" "}
-                I have read and agreed to the <a href="">Terms of Service</a>
-                
-              </label>
-    
-              <div className="rememberForget">
-              <input
-                id="rememberForget"
-                type="checkbox"
-                onChange={handleChange}
-                name="rememberForget"
-                checked={formData.rememberForget}
-                required
-              />
-              </div>
-    
-              
-              <label htmlFor="rememberForget">
-                {" "}
-                Remember me <a>Forgot password?</a>
-                
-              </label>
 
+              <p>{" "}I have read and agreed to the{" "}<span className="span"><a href="" className="terms">Terms of Service</a></span></p>
+                </label>
+              </div>
+
+             
+              
+             
+                
+                
+              
+    
+              
               
               
                 </div>
     
              
     
-              <Button text="Sign up" />
               
+              </div>
             </form>
+            </div>
           </div>
         </>
       );

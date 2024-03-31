@@ -12,8 +12,10 @@ export default function MeetuppageMain() {
 
   return (
     <div className="mainWrap">
+      <div className="meetingHeader">
       <h1>Software Development weekly meetup</h1>
       <p>Sunday 3rd March 2024</p>
+      </div>
 
       <Button text="Share meeting link" />
       <div className="heroImgWrap">

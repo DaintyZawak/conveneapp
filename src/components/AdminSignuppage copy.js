@@ -35,26 +35,31 @@ export default function AdminSignup() {
   return (
     <>
       <div className="onboardingPage">
+        <div className="overallSignup">
+        <form onSubmit={handleSubmit} className="form">
         <div class="welcomeTxt">
-          <h1>Welcome to Convene!</h1>
           
-          <h2>Create an Admin account</h2>
-
-          <div className="loginLink">
-                <p>Already have an account? <Link to="/adminlogin">Login</Link></p>
-                
+              <h2 className="convene">Welcome to Convene!</h2>
+          <h1 className="welcome">Create an Admin Account</h1>
+    
+                <div className="loginLink">
+                <p className="already">Already have an account?{" "}
+                <span className="span">
+                <Link to="/adminlogin">Login</Link></span></p>
+               
               
               </div>
-         
         </div>
 
-        <form onSubmit={handleSubmit}>
+        
           <label htmlFor="firstName"> First Name</label>
           <input
             type="text"
             placeholder="First Name"
             id="firstName"
             name="firstName"
+            maxLength="100"
+            minLength="3"
             onChange={handleChange}
             value={formData.firstName}
           />
@@ -65,6 +70,8 @@ export default function AdminSignup() {
             placeholder="Last Name"
             id="lastName"
             name="lastName"
+            maxlength="100"
+            minLength="3"
             onChange={handleChange}
             value={formData.lastName}
           />
@@ -77,12 +84,15 @@ export default function AdminSignup() {
             name="emailAddress"
             onChange={handleChange}
             value={formData.emailAddress}
+            required
           />
 
           <label htmlFor="password"> Password</label>
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Create a password"
+            minLength="6"
+            maxlength="15"
             id="password"
             name="password"
             onChange={handleChange}
@@ -94,12 +104,14 @@ export default function AdminSignup() {
             type="password"
             placeholder="Confirm Password"
             id="confirmPassword"
+            minLength="6"
+            maxlength="15"
             name="confirmPassword"
             onChange={handleChange}
             value={formData.password}
           />
 
-            <label htmlFor="industry"> Industry </label>
+            <label htmlFor="industry" className="industry"> Industry </label>
             <select
               id="industry"
               value={formData.location}
@@ -118,8 +130,8 @@ export default function AdminSignup() {
             </select>
 
             <fieldset> 
-              <legend>Provide an overview of your professional background </legend>           <label htmlFor="comments"> </label>
-              <textarea
+              <legend>Provide an overview of your professional background and experience {" "} </legend>           <label htmlFor="comments"> </label>
+              <textarea className="textarea"
                 value={formData.comments}
                 placeholder=""
                 id="comments"
@@ -128,26 +140,26 @@ export default function AdminSignup() {
               />{" "}
             
 
-            <label htmlFor="file">Upload any of your recent professional certification(s)</label>
+            <label htmlFor="file" className="fileLabel">Upload any of your recent professional certification(s)</label>
             <input type="file" 
-            id="file" onChange={handleChange} name="agreeement" />
+            id="file" onChange={handleChange} name="file" />
             </fieldset>
 
+            <Button text="Sign up" />
 
           <div className="agreement">
-            <input
-              id="agreement"
-              type="checkbox"
-              onChange={handleChange}
-              name="agreement"
-              checked={formData.agreement}
-            />
+          <label htmlFor="agreement" className="checkbox-label">
+              <input
+                id="agreement"
+                type="checkbox"
+                onChange={handleChange}
+                name="agreement"
+                checked={formData.agreement}
+                required
+              />
 
-            
-            <label htmlFor="agreement">
-              {" "}
-              I have read and agreed to the <a href="">Terms of Service</a>
-            </label>
+              <p>{" "}I have read and agreed to the{" "}<span className="span"><a href="" className="terms">Terms of Service</a></span></p>
+                </label>
           </div>
 
           {/* <fieldset>
@@ -218,8 +230,9 @@ export default function AdminSignup() {
             </label>
           </fieldset> */}
 
-          <Button text="Sign up" />
+          
         </form>
+      </div>
       </div>
     </>
   );

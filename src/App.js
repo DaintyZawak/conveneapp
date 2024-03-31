@@ -41,11 +41,14 @@ export default function App() {
       path: "/profile",
 
       element: 
-      <UserAuthContextProvider> 
-          <ProtectedRoute>
-            <Userprofile />
-            </ProtectedRoute>
-          </UserAuthContextProvider>
+      
+      <Userprofile />
+      
+      // <UserAuthContextProvider> 
+      //     <ProtectedRoute>
+      //       <Userprofile />
+      //       </ProtectedRoute>
+      //     </UserAuthContextProvider>
       
     },
 

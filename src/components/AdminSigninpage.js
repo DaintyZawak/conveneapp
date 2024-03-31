@@ -6,6 +6,7 @@ export default function AdminSignin() {
     const [formData, setFormData] = useState(
         {
             emailAddress: "", 
+            username: "", 
             password: "",
         }
         
@@ -39,13 +40,18 @@ export default function AdminSignin() {
         <>
 
             <div className="onboardingPage">
+                <div className="overallSignin">
+                <form onSubmit={handleSubmit}>
+            
             <div className="welcomeTxt">
-                <h1>Welcome Back to Convene!</h1>
-                <h2>Login as an Admin
+        <h2 className="convene">Convene</h2>
+          
+                <h1 className="welcome">Welcome Back!</h1>
+                <h2 className="convene">Login as an Admin
                 </h2>
                 <div className="signUpLink">
-            <p>
-              Don't have an account? <Link to="/adminsignup">Sign up</Link>
+            <p className="already">
+              Don't have an account?{" "}<span className="span"><Link to="/adminsignup">Sign up</Link></span>
             </p>
           </div>
                 </div>
@@ -53,25 +59,29 @@ export default function AdminSignin() {
 
                 
 
-                <form onSubmit={handleSubmit}>
+                
                     
                     
 
                     <label htmlFor='emailAddress'> Email Address</label>
                         <input type='email' placeholder='Email' 
-                        id="emailAddress" name="emailAddress" onChange={handleChange} value={formData.emailAddress} />
+                        maxLength="100"
+                        minLength="3"
+                        id="emailAddress" name="emailAddress" 
+                        onChange={handleChange} value={formData.emailAddress} />
                     
                     <label htmlFor='password'> Password</label>
                         <input type='password' placeholder='Password'
+                         maxlength="100"
+                         minLength="3"
                         id="password" name="password" onChange={handleChange} value={formData.password} />
 
-                    
                     
 
                    <Button text= "Login"/>
                 </form>
             </div>
-
+            </div>
         </>
     )
 }
