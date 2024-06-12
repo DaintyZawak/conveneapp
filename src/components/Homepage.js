@@ -1,30 +1,31 @@
 import { useEffect } from "react";
-import { Link
+import { Link, Route, Routes
 } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll"; 
 import Background from "../Assets/backg.jpg";
 import Networking from "../Assets/network-2.png";
 
 
 function Homepage() {
 
-  useEffect(() => {
-    function handleOurStoryClick(event) {
-      event.preventDefault();
-      document
-        .getElementById("our-story")
-        .scrollIntoView({ behavior: "smooth" });
-    }
-    const ourStoryLink = document.querySelector('a[href="#our-story"]');
-    if (ourStoryLink) {
-      ourStoryLink.addEventListener("click", handleOurStoryClick);
-    }
+  // useEffect(() => {
+  //   function handleOurStoryClick(event) {
+  //     event.preventDefault();
+  //     document
+  //       .getElementById("our-story")
+  //       .scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   const ourStoryLink = document.querySelector('[href="#our-story"]');
+  //   if (ourStoryLink) {
+  //     ourStoryLink.addEventListener("click", handleOurStoryClick);
+  //   }
 
-    return () => {
-      if (ourStoryLink) {
-        ourStoryLink.removeEventListener("click", handleOurStoryClick);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (ourStoryLink) {
+  //       ourStoryLink.removeEventListener("click", handleOurStoryClick);
+  //     }
+  //   };
+  // }, []);
 
   useEffect(() => {
     function handleScroll() {
@@ -49,6 +50,7 @@ function Homepage() {
   }, []);
   
     return (
+      
       <div className="homepage">
         <div className="homenav">
           <div className="lefthomenav">
@@ -56,14 +58,16 @@ function Homepage() {
           </div>
           <div className="righthomenav">
             <ul>
-              <li><a href="#our-story">Our Story</a></li>
+              <li>About us</li>
               <li>Membership</li>
+              <li><AnchorLink href="#our-story">Our Story</AnchorLink></li>
               <li><Link to="/signup">Sign up</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/adminlogin">Admin Console</Link></li>
-              <li><Link to="/adminsignup">Become an admin</Link></li>
-              <li>About us</li>
+              <li><Link to="/adminsignup">Become an admin</Link></li>             
             </ul>
+
+            
            
           </div>
         </div>
